@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (needed for offcanvas behavior) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+            /* font-family: 'Open Sans', sans-serif; */
+        }
+        html, body {
+    overflow-x: hidden;
+}
+        .container-1
+        {
+            background-color: #364c56;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 4rem;
+            
+        }
+        .image-container
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/dffab182553b5bc2ac800c7f/happy.jpg');
+            width: 40%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           background-size: cover;
+           
+        }
+        .text-container
+        {
+            width: 35%;
+            height: 100vh;
+            background-color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+        }
+        
+        
+        .text-container>p:first-child
+        {
+            font-family: Raleway, sans-serif;
+            color: rgb(216, 130, 9);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .text-container>h1
+        {
+            font-size: 3.3rem;
+            font-family: "Arvo", serif;
+            font-weight: 900;
+            color: rgb(63, 58, 58);
+            line-height: 1.2;
+            
+        }
+        .text-container > p:nth-of-type(2)
+        {
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+            font-family: Raleway, sans-serif;
+            
+            line-height: 1.6; 
+
+        }
+        .text-container>p
+        {
+            font-family: Raleway, sans-serif;
+        }
+        .text-container>a
+        {
+            text-decoration: none;
+            color: black;
+            font-family: Raleway, sans-serif;
+            border: 1px solid black;
+            padding: 1rem;
+            font-size: 1.25rem;
+            width: 12rem;
+            text-align: center;
+        }
+        .container-2
+        {
+            width: 100vw;
+            
+            display: grid;
+            grid-template-columns: 40% 35%; 
+           
+
+            grid-template-areas: 'a b'
+            'c d';
+            justify-content: center;
+            padding: 4rem;
+        }
+        .sub-cont-1
+        {
+           background-color: #A27B5C;
+           width: 100%;
+            grid-area: a;
+            color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            
+            
+            
+        }
+        .sub-cont-2
+        {
+            background-image: url('	https://images01.nicepage.com/c461c07a441a5d220e8feb1a/b6b8dc62c2fb55f4b7b0c7dc/Untitled5.jpg');
+            width: 100%;
+            height: 90vh;
+            background-repeat: no-repeat;
+           background-size: cover;
+           grid-area: b;
+           object-fit: cover;
+           
+        }.sub-cont-3
+        {
+            background-image: url('	https://images01.nicepage.com/c461c07a441a5d220e8feb1a/216fe70998a15182aa39a825/sc.jpg');
+            width: 100%;
+            height: 90vh;
+            background-repeat: no-repeat;
+           background-size: cover;
+           grid-area: c;
+           object-fit: cover;
+        }
+        .sub-cont-4
+        {
+            width: 100%;
+            background-image: linear-gradient(#364c56, #3f474b);
+            grid-area: d;
+           
+            color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+        }
+        .sub-cont-1>p:first-child
+        {
+            font-family: "Arvo", serif;
+            font-size: 2.7rem;
+        }
+        .sub-cont-1>p:last-child
+        {
+            font-family: Raleway, sans-serif;
+            font-size: 1.25rem;
+        }
+        /* .sub-cont-4
+        {
+           background-color: #A27B5C;
+           width: 100%;
+            grid-area: a;
+            color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            
+            
+        } */
+        .sub-cont-4>p:first-child
+        {
+            font-family: "Arvo", serif;
+            font-size: 2.7rem;
+            color: #c66e26;
+            line-height: 1.3;
+            font-weight: 400;
+            
+        }
+        .sub-cont-4>p:last-child
+        {
+            font-family: Raleway, sans-serif;
+            font-size: 1.25rem;
+            color: white;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        .container-3
+        {
+            background-color: #4C585B;
+            width: 100%;
+            height: auto;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 4rem;
+            
+        }
+        .sub-1
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            width: 30%;
+            height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            justify-content: center;
+        }
+        .sub-1>p:first-child
+        {
+            font-weight: 400;
+            font-size: 3rem;
+            line-height: 1.1;
+            font-family: "Arvo", serif;
+        }
+        .sub-1>p:nth-of-type(2)
+        {
+            font-size: 1.25rem;
+            font-weight: 600;
+            font-family: Raleway, sans-serif;
+            line-height: 1.5;
+        }
+        .sub-1>a
+        {
+            text-decoration: none;
+            
+            font-family: Raleway, sans-serif;
+            border: 1px solid white;
+            padding: 1rem;
+            font-size: 1.25rem;
+            width: 12rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .heading-container>p
+        {
+            /* font-weight: 700; */
+            font-size: 3rem;
+            font-family: "Arvo", serif;
+            color: rgb(72, 69, 69);
+        }
+        .sub-2
+        {
+            
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/6fc7dd318ee55255b7130f4f/d.jpg');
+            width: 45%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           background-size: cover;
+        }
+        .item1
+        {
+            background-image: url('./hands.png');
+            width: 100%;
+            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+           grid-area: a;
+           background-position: center center;
+           
+        }
+        .item2
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/bf94ef1e2ae15c6c8fe72aa2/xcsd.jpg');
+           width: 100%;
+           height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+           grid-area: b;
+           
+           background-position: center center;
+        }
+        .item3
+        {
+            background-image: url('	https://images01.nicepage.com/c461c07a441a5d220e8feb1a/20cb4664dc20564d914e4ad5/z.jpg');
+            width: 100%;
+            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+           grid-area: c;
+           background-position: center center;
+        }
+        .item4
+        {
+            height: 100%;
+            background-image: linear-gradient(#364c56, #bf795c);
+            grid-area: d;
+            background-position: center center;
+            font-weight: 400;
+            font-size: 2.25rem;
+            line-height: 1.1;
+            font-family: "Arvo", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            color: white;
+            height: 60vh;
+        }
+        .item5
+        {
+            background-image: url('	https://images01.nicepage.com/c461c07a441a5d220e8feb1a/7d877f2fe57559ee82d6c457/x.jpg');
+            width: 100%;
+            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+           grid-area: e;
+           background-position: center center;
+        }
+
+        .item6
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/2cafc6082ca8517a819e8e8d/xs.jpg');
+            width: 100%;
+            height: 60vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+           grid-area: f;
+           background-position: center center;
+        }
+        .item7
+        {
+            background-image: linear-gradient(#364c56, #293033);
+            grid-area: g;
+            height: 60vh;
+            background-position: center center;
+            font-size: 1.25rem;
+            font-family: Raleway, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.2rem;
+            line-height: 1.5;
+        }
+        .item-container
+        {
+           width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,25%);
+            /* grid-template-rows: repeat(3, 30%); */
+            /* height: auto;
+            min-height: 100vh; */
+            
+          
+            grid-template-areas: 'a b b'
+            'c d e'
+            'f f g';
+            justify-content: center;
+            /* align-items: stretch; */
+            
+        }
+        .heading-container {
+         text-align: center;
+         padding: 2rem;
+        
+    
+        }
+        .container-4
+        {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem;
+            height: auto;
+           
+            
+        }
+         .container-5
+        {
+            background-image: linear-gradient(#364c56, #293033);
+            
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             padding: 5rem;
+            
+           
+            
+        }
+        .img-5
+        {
+            background-image: url('./Smile.png');
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-position: center center;
+            background-size: cover;
+            width: 40%;
+        } 
+        .text-5
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            display: flex;
+            flex-direction: column;
+            color: white;
+            height: 100vh;
+            width: 40%;
+            padding: 2rem;
+            justify-content: center;
+            
+            gap: 2rem;
+        }
+        .text-5>p:first-child
+        {
+            font-weight: 400;
+          font-size: 3rem;
+         line-height: 1.3;
+         font-family: "Arvo", serif;
+        }
+        .text-5>p:nth-of-type(2)
+        {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.5;
+            font-family: Raleway, sans-serif;
+        }
+        .text-5>a
+        {
+            text-decoration: none;
+            
+            font-family: Raleway, sans-serif;
+            border: 1px solid white;
+            padding: 1rem;
+            font-size: 1.25rem;
+            width: 12rem;
+            text-align: center;
+            color: white;
+        }
+        .container-6
+        {
+            background-color: #364c56;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            height: 25vh;
+            align-items: center;
+            font-family: Raleway, sans-serif;
+        }
+        .cont
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            height: auto;
+            font-family: "Arvo", serif;
+            padding: 2rem;
+        }
+        .cont>p:first-child
+        {
+            font-family: "Arvo", serif;
+            font-size: 1rem;
+        }
+        .cont>p:last-child
+        {
+            font-family: Raleway, sans-serif;
+            font-size: 0.8rem;
+        }
+        .container-7
+        {
+            background-color: #333333;
+            height: 12vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: Raleway, sans-serif;
+
+        }
+        .container-7>a
+        {
+            color: #A27B5C;
+        }
+        .container-7>span
+        {
+            color: white;
+        }
+        .container
+        {
+            /* height: auto; */
+            background-color: #293033;
+            
+            color: white;
+            width: 100vw;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-around;
+          
+            /* height: auto; */
+            padding: 0.8rem;
+            align-items: center;
+        }
+      
+   
+
+.offcanvas
+{
+    width: 30vw;
+    
+    background-color: transparent !important;
+    height: 100vh;
+   
+
+}
+.btn.btn-primary {
+    background-color: transparent !important;
+    border: none !important;
+    color: white !important; /* Change text color as needed */
+}
+#search
+{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.25rem;
+    caret-color: white; 
+    
+}
+.search
+{
+    border: 1px solid white;
+    padding: 0.5rem;
+    height: 3rem;
+    
+}
+.offcanvas {
+    background-color: black !important; /* Sets the off-canvas background to black */
+    color: white; /* Ensures text is readable */
+    width: 20vw !important;
+}
+.btn-close
+{
+    filter: invert(1); 
+}
+.btn-close:focus {
+    box-shadow: none !important;  /* Removes the orange outline */
+    outline: none !important;     /* Removes default focus outline */
+}
+.offcanvas-body
+{
+    text-align: center;
+}
+@media screen and (max-width : 1250px) {
+    .container-1
+        {
+            background-color: #364c56;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            /* flex-direction: column; */
+            align-items: center; 
+            justify-content: center; 
+            /* padding: 4rem; */
+            padding: 4rem;
+            
+        }
+        .image-container
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/dffab182553b5bc2ac800c7f/happy.jpg');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           /* background-size: contain; */
+           background-position: center center;
+           
+        }
+        .text-container
+        {
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            gap: 2rem;
+          
+
+        }
+        .text-container>h1
+        {
+            font-size: 2.2rem;
+            font-family: "Arvo", serif;
+            font-weight: 900;
+            color: rgb(63, 58, 58);
+            line-height: 1.2;
+            
+        }
+        .container-2
+        {
+            /* width: 100vw; */
+            
+            display: grid;
+            grid-template-columns: repeat(2,50%); 
+           
+
+            grid-template-areas: 'a b'
+            ' c d';
+            justify-content: center;
+            
+        }
+        .sub-cont-1,.sub-cont-2,.sub-cont-3,.sub-cont-4
+        {
+            width: 100%;
+            object-fit: contain;
+            height: 100vh;
+        }
+        .container-3
+        {
+            background-color: #4C585B;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            /* flex-direction: column; */
+            align-items: center; 
+            justify-content: center; 
+           
+            padding: 4rem;
+            
+        }
+        .sub-1
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            width: 100%;
+            height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            justify-content: center;
+        }
+        .sub-1>p:first-child
+        {
+            font-weight: 400;
+            font-size: 2.2rem;
+            /* line-height: 1.1; */
+            font-family: "Arvo", serif;
+        }
+        .sub-2
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/6fc7dd318ee55255b7130f4f/d.jpg');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .container-5
+        {
+            background-image: linear-gradient(#364c56, #293033);
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            /* flex-direction: column; */
+            align-items: center; 
+            justify-content: center; 
+            
+            padding: 4rem;
+            
+           
+            
+        }
+        .img-5
+        {
+            background-image: url('./Smile.png');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           /* background-size: contain; */
+           background-position: center center;
+        } 
+        .text-5
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            display: flex;
+            flex-direction: column;
+            color: white;
+            
+            
+            padding: 2rem;
+            justify-content: center;
+            
+            gap: 2rem;
+            width: 100%;
+            height: 100vh;
+           
+            
+           
+        }
+
+    
+}
+@media screen and  (max-width : 1000px)  {
+    .container-1
+        {
+            background-color: #364c56;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            /* flex-direction: column; */
+            align-items: center; 
+            justify-content: center; 
+            /* padding: 4rem; */
+            padding: 4rem;
+            
+        }
+        .image-container
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/dffab182553b5bc2ac800c7f/happy.jpg');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           /* background-size: contain; */
+           background-position: center center;
+           
+        }
+        .text-container
+        {
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            gap: 2rem;
+          
+
+        }
+        .text-container>h1
+        {
+            font-size: 2.2rem;
+            font-family: "Arvo", serif;
+            font-weight: 900;
+            color: rgb(63, 58, 58);
+            line-height: 1.2;
+            
+        }
+        .container-2
+        {
+            /* width: 100vw; */
+            
+            display: grid;
+            grid-template-columns: repeat(2,50%); 
+           
+
+            grid-template-areas: 'a b'
+            ' c d';
+            justify-content: center;
+            
+        }
+        .sub-cont-1,.sub-cont-2,.sub-cont-3,.sub-cont-4
+        {
+            width: 100%;
+            object-fit: contain;
+            height: 100vh;
+        }
+        .container-3
+        {
+            background-color: #4C585B;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            /* flex-direction: column; */
+            align-items: center; 
+            justify-content: center; 
+           
+            padding: 4rem;
+            
+        }
+        .sub-1
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            width: 100%;
+            height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            justify-content: center;
+        }
+        .sub-1>p:first-child
+        {
+            font-weight: 400;
+            font-size: 2.2rem;
+            /* line-height: 1.1; */
+            font-family: "Arvo", serif;
+        }
+        .sub-2
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/6fc7dd318ee55255b7130f4f/d.jpg');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .item-container
+        {
+           width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,50%); 
+            /* grid-template-rows: repeat(1,100%);
+            height: auto;
+            min-height: 100vh; */
+            /* padding: 3rem; */
+            
+          
+            grid-template-areas: 'a b'
+            'c d'
+            'e e'
+            'f g'
+            ;
+            justify-content: center;
+            /* align-items: stretch; */
+            
+        }
+        .container-5
+        {
+            background-image: linear-gradient(#364c56, #293033);
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            /* flex-direction: column; */
+            align-items: center; 
+            justify-content: center; 
+            
+            padding: 4rem;
+            
+           
+            
+        }
+        .img-5
+        {
+            background-image: url('./Smile.png');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           /* background-size: contain; */
+           background-position: center center;
+        } 
+        .text-5
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            display: flex;
+            flex-direction: column;
+            color: white;
+            
+            
+            padding: 2rem;
+            justify-content: center;
+            
+            gap: 2rem;
+            width: 100%;
+            height: 100vh;
+           
+            
+           
+        }
+        .container-6
+        {
+            background-color: #364c56;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            font-family: Raleway, sans-serif;
+        }
+
+    
+}
+
+@media screen and  (max-width : 750px){
+    .container-1
+        {
+            background-color: #364c56;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+           
+            padding: 4rem;
+            
+        }
+        .image-container
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/dffab182553b5bc2ac800c7f/happy.jpg');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           /* background-size: contain; */
+           background-position: center center;
+           
+        }
+        .text-container
+        {
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            gap: 2rem;
+          
+
+        }
+        .container-2
+        {
+            /* width: 100vw; */
+            
+            display: grid;
+            grid-template-columns: repeat(1,100%); 
+           
+
+            grid-template-areas: 'a'
+            'b'
+            'c'
+            'd';
+            justify-content: center;
+            /* padding: 4rem; */
+        }
+        .sub-cont-1,.sub-cont-2,.sub-cont-3,.sub-cont-4
+        {
+            width: 100%;
+            object-fit: contain;
+
+        }
+        .container-3
+        {
+            background-color: #4C585B;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+           
+            padding: 4rem;
+            
+        }
+        .sub-1
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            width: 100%;
+            height: auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            justify-content: center;
+        }
+        .sub-2
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/6fc7dd318ee55255b7130f4f/d.jpg');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .item-container
+        {
+           width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1,100%); 
+            /* grid-template-rows: repeat(1,100%);
+            height: auto;
+            min-height: 100vh; */
+            
+          
+            grid-template-areas: 'a'
+            'b'
+            'c'
+            'd'
+            'e'
+            'f'
+            'g';
+            justify-content: center;
+            /* align-items: stretch; */
+            
+        }
+        .container-5
+        {
+            background-image: linear-gradient(#364c56, #293033);
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            
+            padding: 4rem;
+            
+           
+            
+        }
+        .img-5
+        {
+            background-image: url('./Smile.png');
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+           /* background-size: contain; */
+           background-position: center center;
+        } 
+        .text-5
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            display: flex;
+            flex-direction: column;
+            color: white;
+            
+            
+            padding: 2rem;
+            justify-content: center;
+            
+            gap: 2rem;
+            width: 100%;
+            height: auto;
+           
+            
+           
+        }
+        .container-6
+        {
+            background-color: #364c56;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            font-family: Raleway, sans-serif;
+        }
+       .container-7
+       {
+        font-size: 0.8rem;
+       }
+       .search
+       {
+        border: none;
+
+        display: flex;
+        justify-content: space-between;
+        
+
+       }
+       #search
+     {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    caret-color: white; 
+    
+     }
+    .search
+   {
+    
+    height: 2rem;
+    
+   }
+       .container
+       {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid white;
+        padding: 0;
+        
+      
+        
+       }
+       .main-container
+       {
+        background-color: #293033; 
+        padding: 1rem;
+        height: auto;
+        
+       }
+       
+       
+       
+        
+
+        
+    }
+    @media screen and (max-width : 400px) {
+        .container-1
+        {
+            background-color: #364c56;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+           
+            padding: 2rem;
+            
+            
+        }
+        .image-container
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/dffab182553b5bc2ac800c7f/happy.jpg');
+            width: 100%;
+           height: 80vh;
+           
+            background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center center;
+           
+        }
+        .text-container
+        {
+            width: 100%;
+            height:auto;
+            
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            
+          
+
+        }
+        .text-container>h1
+        {
+            font-size: 2.8rem;
+            font-family: "Arvo", serif;
+            font-weight: 900;
+            color: rgb(63, 58, 58);
+            line-height: 1.2;
+            
+        }
+        .text-container>a
+        {
+            text-decoration: none;
+            color: black;
+            font-family: Raleway, sans-serif;
+            border: 1px solid black;
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 40%;
+            text-align: center;
+        }
+        .text-container > p:nth-of-type(2)
+        {
+            letter-spacing: 0.8px;
+            font-size: 1.25rem;
+            font-family: Raleway, sans-serif;
+            
+            line-height: 1.2; 
+            font-weight: 600;
+
+        }
+        .container-2
+        {
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+            display: flex;
+            
+           flex-direction: column;
+            justify-content: center;
+            /* padding: 4rem; */
+            padding: 2rem;
+        }
+        
+        .sub-cont-1
+        {
+            height: auto;
+            width: 100%;
+            gap: 1rem;
+        }
+        .sub-cont-1>p:first-child
+        {
+            font-family: "Arvo", serif;
+            font-size: 2.25rem;
+            line-height: 1;
+             font-weight: 400;
+             
+        }
+        .sub-cont-2
+        {
+            height: 80vh;
+            background-size: cover;
+            width: 100%;
+        }
+        .sub-cont-3
+        {
+            height: 80vh;
+            background-size: cover;
+            width: 100%;
+            order: 1;
+        }
+        .sub-cont-4
+        {
+            height: auto;
+            width: 100%;
+            gap: 1rem;
+        }
+        .container-3
+        {
+            background-color: #4C585B;
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+           
+            padding: 2rem;
+            /* gap: 2rem; */
+            
+        }
+        .sub-1
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            /* gap: 3rem; */
+            justify-content: center;
+        }
+        .sub-2
+        {
+            background-image: url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/6fc7dd318ee55255b7130f4f/d.jpg');
+            width: 100%;
+            height: 80vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        .heading-container>p
+        {
+            font-weight: 700;
+            font-size: 2.8rem;
+            font-family: "Arvo", serif;
+            color: rgb(72, 69, 69);
+        }
+        .heading-container
+        {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
+        .container-4
+        {
+            width: 100%;
+            height: auto;
+            padding: 2rem;
+            display: flex;
+            
+           flex-direction: column;
+            justify-content: center;
+        }
+        .item-container
+        {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+           
+            /* padding: 1rem; */
+        }
+        .item1,.item2,.item3,.item5,.item6
+        {
+            height: 80vh;
+            background-size: cover;
+            width: 100%;
+        }
+        .item4,.item7
+        {
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            /* gap: 3rem; */
+            justify-content: center;
+        }
+        .container-5
+        {
+            background-image: linear-gradient(#364c56, #293033);
+            
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            
+            padding: 2rem;
+            
+            
+           
+            
+        }
+        .img-5
+        {
+            background-image: url('./Smile.png');
+            width: 100%;
+            height: 80vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+           background-position: center center;
+        } 
+        .text-5
+        {
+            background-image: linear-gradient(#bf795c, #364c56);
+            width: 100%;
+            height:auto;
+            
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+           
+            
+           
+        }
+        
+    }
+
+        
+
+        
+    </style>
+</head>
+<body>
+   <div class="main-container">
+    <div class="container ">
+        
+        <div class="search">
+            <input type="search" id="search" placeholder="Search">
+            <span><i class="bi bi-search"></i></span>
+
+        </div>
+        <div class="label">
+            
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list fs-1"></i></button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Page-7</p>
+  </div>
+</div>
+            </div>
+            
+            
+        </div>
+   </div>
+    </div>
+    <div class="container-1">
+        <div class="image-container">
+            
+
+        </div>
+        <div class="text-container">
+            <p>HOW TO STAY POSITIVE</p>
+            <h1>Simple Living Manifesto</h1>
+            <p>Living a life where you're happier and kinder towards yourself is not just about what you can do. But also about what you are already doing. And especially those habits that do have a negative and unhappy impact on your life.</p>
+            <a href="https://www.positivityblog.com/happier-self-kinder-life-today/" target="_blank">LEARN MORE</a>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="sub-cont-1">
+            <p>10 Things You Need to Stop Doing to Start Living a Happier Life</p>
+            <p>When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us.</p>
+        </div>
+        <div class="sub-cont-2">
+
+        </div>
+        <div class="sub-cont-3">
+
+        </div>
+        <div class="sub-cont-4">
+            <p>10 Keys to Happier Living</p>
+            <p>Give sincere compliments often. You can easily lift someone’s spirits by complimenting their work, attitude, style, or anything else you genuinely find remarkable. Not only will it help them but it will help you be seen as a person who is uplifting and nice to have around.</p>
+        </div>
+    </div>
+    <div class="container-3">
+        <div class="sub-1">
+            <p>Positive Reminders</p>
+            <p>All situations are temporary. Nothing lasts forever. Buildings collapse, plants die, hot cups of coffee go cold, tires go flat. Everything is always in transition. Here is the key: even when your coffee gets cold, it’s still a coffee you want and you can find a way to enjoy it.</p>
+            <a href="">LEARN MORE</a>
+
+        </div>
+        <div class="sub-2">
+
+        </div>
+    </div>
+    
+    
+        
+       <div class="container-4">
+        <div class="heading-container">
+            <p>Everything comes at the right time</p>
+        </div>
+        <div class="item-container">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4">
+                <p>"Happiness is when what you think, what you say, and what you do are in harmony"</p>
+            </div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+            <div class="item item7">
+                <p>Happiness is a habit that we have to practice on a daily basis. Life is full of uncertainty, fear, and struggle, but we can cultivate a practice that brings out the true joy living inside us at all times.</p>
+            </div>
+        </div>
+       </div>
+       <div class="container-5">
+        <div class="img-5">
+
+        </div>
+        <div class="text-5">
+            <p>Be Inspired. Be Inspiring.</p>
+            <p>Love yourself. Ask yourself a question: would you let someone you deeply love feel bad, stressed and overwhelmed? Probably not. You would do whatever you can to help them feel better because you deeply love them. Why is it so hard for us to love ourselves in the same way? There is nothing in the world more important than loving yourself.</p>
+            <a href="https://www.positivityblog.com/happier-self-kinder-life-today/" target="_blank">LEARN MORE</a>
+
+        </div>
+       </div>
+       <div class="container-6">
+        <div class="cont cont-1">
+            <p>Headline</p>
+            <p>Sample footer text</p>
+
+        </div>
+        <div class="cont cont-2">
+            <p>Headline</p>
+            <p>Sample footer text</p>
+
+        </div>
+        <div class="cont cont-3">
+            <p>Headline</p>
+            <p>Sample footer text</p>
+
+        </div>
+       </div>
+       <div class="container-7">
+        <a href="">Website Templates</a>
+        <span>created With</span>
+        <a href="">Website Builder software</a>
+       </div>
+    
+</body>
+</html>
